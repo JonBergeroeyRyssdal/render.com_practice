@@ -4,12 +4,13 @@ const path = require("path")
 const basename = path.basename(__filename);
 require('dotenv').config()
 const connection = {
-  database: process.env.DB_NAME,
-  username: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  host: process.env.DB_HOST,
+  database: process.env.DATABASE_NAME,
+  username: process.env.ADMIN_USERNAME,
+  password: process.env.ADMIN_PASSWORD,
   port: process.env.DB_PORT,
-  dialect: process.env.DB_DIALECT,
+  host: process.env.DB_HOST,
+  dialect: process.env.DIALECT,
+  dialectmodel: process.env.DIALECTMODEL,
 };
 
 const sequelize = new Sequelize(connection);
